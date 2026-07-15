@@ -1,34 +1,9 @@
-[![actions](https://github.com/nicerobot/template.repo-docs/actions/workflows/actions.yml/badge.svg)](https://github.com/nicerobot/template.repo-docs/actions/workflows/actions.yml) [![docs](https://github.com/nicerobot/template.repo-docs/actions/workflows/docs.yml/badge.svg)](https://github.com/nicerobot/template.repo-docs/actions/workflows/docs.yml) [![pages](https://github.com/nicerobot/template.repo-docs/actions/workflows/pages.yml/badge.svg)](https://github.com/nicerobot/template.repo-docs/actions/workflows/pages.yml)
+[![actions](https://github.com/uplang/docs.isnow.go/actions/workflows/actions.yml/badge.svg)](https://github.com/uplang/docs.isnow.go/actions/workflows/actions.yml) [![docs](https://github.com/uplang/docs.isnow.go/actions/workflows/docs.yml/badge.svg)](https://github.com/uplang/docs.isnow.go/actions/workflows/docs.yml) [![pages](https://github.com/uplang/docs.isnow.go/actions/workflows/pages.yml/badge.svg)](https://github.com/uplang/docs.isnow.go/actions/workflows/pages.yml)
 
-# template.repo-docs
+# docs.isnow.go
 
-Canonical template for a project's **public docs** repository (`<org>/docs.<project>`). A project's developer and user documentation — contributing, design, rules — lives here as a public [Hugo](https://gohugo.io) site published via GitHub Pages. Private content (ideas, tasks, specs) lives in the project's hub repo (`project.<project>`), never here.
+Documentation for **[isnow.go](https://github.com/uplang/isnow.go)** — the Go library, `isnow` command-line tool, and HTTP time server for the [isnow](https://github.com/uplang/isnow) (*DTimpalr*) date/time pattern language.
 
-## Layout
+Published at **[uplang.github.io/docs.isnow.go](https://uplang.github.io/docs.isnow.go/)**.
 
-| Path | Purpose |
-| --- | --- |
-| [`content/`](content/) | Markdown documentation — the Hugo site content. |
-| [`layouts/`](layouts/) | Hugo templates (managed fleet style — distributed from this template). |
-| [`assets/`](assets/) | Hugo assets (managed fleet style — distributed from this template). |
-| [`hugo.json`](hugo.json) | Hugo configuration. |
-| [`.github/workflows/pages.yml`](.github/workflows/pages.yml) | The GitHub Pages build workflow (managed fleet style). Always present; it deploys whenever Pages can serve the site and skips neutrally otherwise. |
-| [`Makefile`](Makefile) | Local preview and build. Run `make` for help. |
-
-## Public, with a self-gating workflow
-
-Everything in this repo is **public** — it exists to be published, so there is no `public/`/`private/` split. Anything private (design notes, tasks, ideas, specs) belongs in the project's private hub repo (`project.<project>`).
-
-A docs repo ships ready to publish: the Pages workflow is always present and **gates on whether Pages can actually serve the site** — a public repo always builds (Pages self-enables on the first run), a private repo builds when Pages is already enabled (paid plans serve private-repo Pages), and a private repo without Pages skips neutrally. There is no file to rename and no change needed to start deploying.
-
-## Going public
-
-1. Make the repository public.
-2. Enable Pages: **Settings → Pages → Source: GitHub Actions** (the workflow's `configure-pages` step does this itself on the first run if needed).
-3. Push (or re-run the **pages** workflow). It publishes the whole site.
-
-## Creating a new docs repo from this template
-
-```bash
-gh repo create <org>/docs.<project> --public --template nicerobot/template.repo-docs
-```
+The documentation is a [Hugo](https://gohugo.io) site; content lives in [`content/`](content/). Run `make` for the available targets (`make serve` previews locally). The layout and assets are the fleet-shared docs style distributed from [`nicerobot/template.repo-docs`](https://github.com/nicerobot/template.repo-docs).
