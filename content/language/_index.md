@@ -73,7 +73,7 @@ The week container starts on **Sunday** (weekday 1). An interval ANDs with the r
 
 A **pattern exclusion** — `! <spec>`, the `!` set off from its sub-spec by a separator — removes every instant where the sub-spec holds. Chain them for a holiday list:
 
-```
+```isnow
 M-F ! 12/25 ! 1/1       every weekday except Christmas and New Year
 ```
 
@@ -96,7 +96,7 @@ Produce it with `isnow canon <isnow>` or `Pattern.Canonical()`.
 
 A **since bound** (`>`, `>=`) and an **until bound** (`<`, `<=`) each carry a sub-spec and define a **window**:
 
-```
+```isnow
 12 <9/1                 every day at noon until September 1
 ::+[9] >=6 <=18         every 9 seconds from 06:00 to 18:00
 ```

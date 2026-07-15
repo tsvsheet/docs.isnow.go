@@ -9,7 +9,7 @@ isnow fits wherever a system stands at an instant and asks **"is this window ope
 
 A flag check *is* a membership test. Store the isnow as the flag's value and evaluate it at request time.
 
-```
+```isnow
 M-F 09-17               on during business hours
 F-Su                    on over the weekend (Fri–Sun)
 M-F ! 12/25 ! 1/1       on every weekday except the holidays
@@ -19,7 +19,7 @@ M-F ! 12/25 ! 1/1       on every weekday except the holidays
 
 Let the service ask the pattern on each request — no scheduler, no cron daemon to run.
 
-```
+```isnow
 ::+[1] >=2 <4           shed load nightly, 02:00–04:00
 Su 03:00                weekly maintenance, Sunday 3am
 ```
@@ -28,7 +28,7 @@ Su 03:00                weekly maintenance, Sunday 3am
 
 Gate the pager; route everything outside the window to a digest.
 
-```
+```isnow
 M-F 08-20               page only during staffed hours
 ```
 
@@ -36,7 +36,7 @@ M-F 08-20               page only during staffed hours
 
 Enforce at the door or the token check, offline.
 
-```
+```isnow
 Sa,Su                   badge works weekends only
 M-F 06-18 ! 12/25       contractor token: weekdays, minus the holiday
 ```
@@ -45,7 +45,7 @@ M-F 06-18 ! 12/25       contractor token: weekdays, minus the holiday
 
 One rule covers the calendar; exclusions carve out the exceptions.
 
-```
+```isnow
 F-Su 17-23              peak pricing, weekend evenings
 ```
 
@@ -53,7 +53,7 @@ F-Su 17-23              peak pricing, weekend evenings
 
 Everything cron does, plus bounds, from-end, intervals, and holiday lists. See [Migrating from cron](../cron/).
 
-```
+```isnow
 6                       daily at 06:00
 M-F-[1] noon            the last business day of the month, at noon
 ```

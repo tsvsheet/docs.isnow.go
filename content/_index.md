@@ -6,7 +6,7 @@ title: isnow.go
 
 `isnow.go` is the Go implementation: an importable library, the `isnow` command-line tool, and an HTTP time server. It is a strict superset of cron in expressiveness — sets, spans, exclusions, from-end counting, steps, and since/until bounds, over one uniform per-field algebra.
 
-```
+```isnow
 6                       every day at 06:00
 M,W,F noon              Mon/Wed/Fri at 12:00:00
 11/ Th-[1] noon         the last Thursday of November at noon

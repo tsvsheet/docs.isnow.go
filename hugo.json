@@ -16,6 +16,7 @@
     }
   },
   "params": {
-    "description": "The Go library, isnow CLI, and HTTP server for the isnow (DTimpalr) date/time pattern language."
+    "description": "The Go library, isnow CLI, and HTTP server for the isnow (DTimpalr) date/time pattern language.",
+    "enhanceScript": "js/isnow-live.js"
   }
 }
