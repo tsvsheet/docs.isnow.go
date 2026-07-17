@@ -4,7 +4,7 @@ title: isnow.go
 
 **isnow** is a date/time _pattern_ language — formally _DTimpalr, a Date/Time Pattern Language for Repetition_. An **isnow** (the language, and a pattern string in it) describes anything from a fixed instant to a complex recurrence and answers one question: **is it now?**
 
-`isnow.go` is the Go implementation: an importable library, the `isnow` command-line tool, and an HTTP time server. It is a strict superset of cron in expressiveness — sets, spans, exclusions, from-end counting, steps, and since/until bounds, over one uniform per-field algebra.
+`isnow.go` is the Go implementation's frontend: the `isnow` command-line tool and an HTTP time server, built on the importable [go-isnow](https://github.com/tsvsheet/go-isnow) library. It is a strict superset of cron in expressiveness — sets, spans, exclusions, from-end counting, steps, and since/until bounds, over one uniform per-field algebra.
 
 ```isnow
 6                       every day at 06:00
@@ -27,4 +27,4 @@ M-F ! 12/25 ! 1/1       every weekday except the holidays
 - **[Migrating from cron](cron/)** — your crontab, as isnows, and how isnow sits next to other schedulers.
 - **[isnow in a QR code](qr/)** — a schedule small enough to print and scan offline.
 
-The language itself (grammar, specification, and the conformance corpus every implementation passes) lives in [tsvsheet/isnow](https://github.com/tsvsheet/isnow). The library is `github.com/tsvsheet/isnow.go`.
+The language itself (grammar, specification, and the conformance corpus every implementation passes) lives in [tsvsheet/isnow](https://github.com/tsvsheet/isnow). The importable Go library is [`github.com/tsvsheet/go-isnow`](https://github.com/tsvsheet/go-isnow), documented at [tsvsheet.github.io/docs.go-isnow](https://tsvsheet.github.io/docs.go-isnow/).
